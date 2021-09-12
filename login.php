@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    $username = $_POST["username"];
+    $username = ($_POST["username"]);
     $_SESSION['username'] = $username;
     if ($username == ""){
         echo"User name cannot be blank";
@@ -29,11 +29,12 @@
             if($username == trim($lineSearch)){
                 //redirect to username file directory
                 echo "Found username";
-                $redirectURL = "/~ehedden/usermainpage.php?user=" .$username; 
+                $redirectURL = "/~ehedden/usermainpage.php?user=" .htmlentities($username); 
                 header("Location: " .$redirectURL);
                 exit;
             }
         }
+        //if username was not found
         fclose($userTxt);
         echo("Invalid Username");
         echo "<br>";

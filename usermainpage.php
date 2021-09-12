@@ -6,37 +6,31 @@
     </head>
 
 <body>
-    
-
-</body>
-</html>
-
-
 <?php
     session_start();
     if(isset($_SESSION['username'])){
         $username = $_SESSION["username"];
         //open directory
-        if(!opendir("/home/ehedden/fileSharingUsers/" .$username)){
-            echo "/~ehedden/fileSharingUsers/" .$username;
+        if(!opendir("/home/ehedden/fileSharingUsers/" .htmlentities($username))){
             echo "Unable to open directory.";
+            exit;
         }
         else{
-            $directory = opendir("/home/ehedden/fileSharingUsers/" .$username); 
-            echo "Entries:\n";
+            $directory = opendir("/home/ehedden/fileSharingUsers/" .htmlentites($username)); 
         }
 
-        //list all files in the direxctory
+        //list all files in the directory
         while (false !== ($entry = readdir($directory))) {
             if ($entry != "." && $entry != "..") {
-                echo "$entry\n";
-                echo "<tr>";
-				echo "<td><a href='download.php?file_name=$entry'>Download</a></td>";
-				echo "<td><a href='viewing.php?file_name=$entry' target=_blank>Viewing</a></td>";
-				echo "<td><a href='delete.php?file_name=$entry'>Deleting</a></td>";
-				echo "</tr>";
+                echo "$entry ";
+				echo "<td><a href='download.php?file_name=$entry'>Download </a></td>";
+				echo "<td><a href='viewing.php?file_name=$entry' target=_blank>View </a></td>";
+				echo "<td><a href='delete.php?file_name=$entry'>Delete </a></td>";
+                echo "<br>";
             }
         }
+
+        
         /*
         $files = readdir($directory);
         echo "<div class=\"liststyle\">";
@@ -64,9 +58,23 @@
 		echo "</table>";
 		echo "</div>";
         */ 
+        echo "<td><a href = 'uploadFile.html'> Click Here to Upload a File </a></td?";
 		closedir($directory);
+        exit;
 	}
-    echo "Username not set.";
+    else{
+        echo "Username not set.";
+        echo"<a href='homepage.html'> Return to Login Page </a>";
+        exit;
+    }
+
+
+    
 ?>
+</body>
+</html>
+
+
+
 
   
