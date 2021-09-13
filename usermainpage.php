@@ -39,7 +39,6 @@
         exit;
     }
 ?>
-    <input type = "button" onclick = "location.href = 'logout.php';" value="Log Out">
 </body>
 </html>
 
