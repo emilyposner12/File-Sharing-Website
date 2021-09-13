@@ -31,7 +31,6 @@
         }
         echo "<td><a href = 'uploadFile.html'> Click Here to Upload a File </a></td?";
 		closedir($directory);
-        exit;
 	}
     else{
         echo "Invalid Username.";
@@ -39,6 +38,14 @@
         exit;
     }
 ?>
+<!--button to logout-->
+<br>
+<form name="logout" method="post" action="logout.php">
+  <label class="logoutLblPos">
+  <input name="submit2" type="submit" id="submit2" value="log out">
+  </label>
+</form>
+
 </body>
 </html>
 
