@@ -23,11 +23,11 @@ if( !preg_match('/^[\w_\-]+$/', $username) ){
 $full_path = sprintf('/home/ehedden/fileSharingUsers/%s/%s', $username, $filename);
 if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $full_path) ){
 	echo "File Upload Success!";
-    echo"<a href='homepage.html'> Return to Login Page </a>";
+    echo"<a href='usermainpage.php'> Return to File Selection Screen </a>";
 	exit;
 }else{
 	echo "File Upload Failure.";
-    echo"<a href='homepage.html'> Return to Login Page </a>";
+    echo"<a href='usermainpage.php'> Return to File Selection Screen </a>";
     exit;
 }
 
