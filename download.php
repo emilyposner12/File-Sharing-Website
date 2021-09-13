@@ -2,7 +2,7 @@
     session_start();
     $file_name = basename($_GET["file_name"]); 
     $username = $_SESSION["user"];
-    $path = sprintf('/home/ehedden/fileSharingUsers/%s/%s', $username, $filename);
+    $path = sprintf('/home/ehedden/fileSharingUsers/%s/%s', $username, $file_name);
     //Check if the file exists
     if (!file_exists($path)) {  
         echo "Error, trouble locating file";  
@@ -11,11 +11,12 @@
     } else {  
         header("Cache-Control: public");
         header("Content-Description: File Transfer");
-        header("Content-Disposition: attachment; filename=$file");
-        header("Content-Type: application/zip");
-        header("Content-Transfer-Encoding: binary");
+        header("Content-Disposition: attachment; filename=$file_name");
+        header("Content-type: application/octet-stream" );  
+        //header("Content-Type: application/zip");
+        //header("Content-Transfer-Encoding: binary");
     // read the file from disk
-    readfile($file);
+    readfile($file_name);
     exit();
     /* 
         $file = fopen($path, "r");  
