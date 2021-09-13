@@ -34,7 +34,7 @@
         exit;
 	}
     else{
-        echo "Username not set.";
+        echo "Invalid Username.";
         echo"<a href='homepage.html'> Return to Login Page </a>";
         exit;
     }
