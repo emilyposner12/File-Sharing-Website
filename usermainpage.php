@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel = "stylesheet" href = "mainpagestyling.css">
+        <meta charset="UTF-8">
         <title> Files </title> 
     </head>
 
