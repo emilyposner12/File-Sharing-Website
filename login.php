@@ -39,4 +39,5 @@
         echo("Invalid Username");
         echo "<br>";
         echo"<a href='homepage.html'> Return to Login Page </a>";
+        exit;
     ?>
