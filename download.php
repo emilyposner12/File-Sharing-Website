@@ -1,7 +1,7 @@
 <?php
     session_start();
     $file_name = basename($_GET["file_name"]); 
-    $username = $_SESSION["user"];
+    $username = $_SESSION["username"];
     $path = sprintf('/home/ehedden/fileSharingUsers/%s/%s', $username, $file_name);
     //Check if the file exists
     if (!file_exists($path)) {  
