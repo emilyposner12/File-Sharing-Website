@@ -2,10 +2,11 @@
 <html>
     <head>
         <title> Files </title> 
-
     </head>
 
 <body>
+    <h1>Your Files</h1>
+<br>
 <?php
     session_start();
     if(isset($_SESSION['username'])){
@@ -29,7 +30,6 @@
                 echo "<br>";
             }
         }
-        echo "<td><a href = 'uploadFile.html'> Click Here to Upload a File </a></td?";
 		closedir($directory);
 	}
     else{
@@ -38,11 +38,17 @@
         exit;
     }
 ?>
-<!--button to logout-->
+<!--buttons to logout and upload a file-->
 <br>
+<form name="uploadFile" method="post" action="uploadFile.html">
+  <input name="submit1" type="submit" id="submit2" value="Upload a File">
+  </label>
+</form>
+
+<br>
+
 <form name="logout" method="post" action="logout.php">
-  <label class="logoutLblPos">
-  <input name="submit2" type="submit" id="submit2" value="log out">
+  <input name="submit2" type="submit" id="submit2" value="Log Out">
   </label>
 </form>
 
