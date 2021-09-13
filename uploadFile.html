@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <title>Upload a File</title>
+    <link rel = "stylesheet" href = "uploadfile.css">
   </head>
   <body>
+    <h1> Upload File </h1>
     <form enctype="multipart/form-data" action="uploader.php" method="POST">
         <p>
             <input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
@@ -14,5 +16,10 @@
             <input type="submit" value="Upload File" />
         </p>
     </form>
+    <form name="nevermind" method="post" action="usermainpage.php">
+      <input name="nevermind" type="submit" value="Go back">
+    </form>
+      
+
   </body>
 </html>
