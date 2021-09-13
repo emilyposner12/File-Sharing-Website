@@ -11,12 +11,12 @@
     if(isset($_SESSION['username'])){
         $username = $_SESSION["username"];
         //open directory
-        if(!opendir("/home/ehedden/fileSharingUsers/" .htmlentities($username))){
+        if(!opendir("/home/ehedden/fileSharingUsers/" .($username))){
             echo "Unable to open directory.";
             exit;
         }
         else{
-            $directory = opendir("/home/ehedden/fileSharingUsers/" .htmlentites($username)); 
+            $directory = opendir("/home/ehedden/fileSharingUsers/" .($username)); 
         }
 
         //list all files in the directory
@@ -24,7 +24,7 @@
             if ($entry != "." && $entry != "..") {
                 echo "$entry ";
 				echo "<td><a href='download.php?file_name=$entry'>Download </a></td>";
-				echo "<td><a href='viewing.php?file_name=$entry' target=_blank>View </a></td>";
+				echo "<td><a href='viewFile.php?file_name=$entry' target=_blank>View </a></td>";
 				echo "<td><a href='delete.php?file_name=$entry'>Delete </a></td>";
                 echo "<br>";
             }
