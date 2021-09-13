@@ -29,35 +29,6 @@
                 echo "<br>";
             }
         }
-
-        
-        /*
-        $files = readdir($directory);
-        echo "<div class=\"liststyle\">";
-		echo "<table>";
-		echo "<tr>";
-		echo "<th>Filename</th>";
-		echo "<th>Download</th>";
-		echo "<th>Viewing</th>";
-		echo "<th>Deleting</th>";
-		echo "</tr>";
-        
-       
-        
-		while ($files !== false){
-			if(($files !== ".") && ($files !== "..")){
-				echo "<tr>";
-				echo "<td class=\"style1\">$files</td>";
-				echo "<td><a href='download.php?file_name=$files'>Download</a></td>";
-				echo "<td><a href='viewing.php?file_name=$files' target=_blank>Viewing</a></td>";
-				echo "<td><a href='delete.php?file_name=$files'>Deleting</a></td>";
-				echo "</tr>";
-			}
-			$files = readdir($dir);
-		}
-		echo "</table>";
-		echo "</div>";
-        */ 
         echo "<td><a href = 'uploadFile.html'> Click Here to Upload a File </a></td?";
 		closedir($directory);
         exit;
@@ -67,10 +38,8 @@
         echo"<a href='homepage.html'> Return to Login Page </a>";
         exit;
     }
-
-
-    
 ?>
+    <input type = "button" onclick = "location.href = 'logout.php';" value="Log Out">
 </body>
 </html>
 

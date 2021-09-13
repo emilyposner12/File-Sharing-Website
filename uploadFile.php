@@ -14,5 +14,9 @@
             <input type="submit" value="Upload File" />
         </p>
     </form>
+    <?php
+      echo "<td><a href = 'usermainpage.php'> Go back </a></td?";
+    ?>
+    
   </body>
 </html>
