@@ -24,9 +24,9 @@
         while (false !== ($entry = readdir($directory))) {
             if ($entry != "." && $entry != "..") {
                 echo "$entry ";
-				echo "<td><a href='download.php?file_name=$entry'>Download </a></td>";
-				echo "<td><a href='viewFile.php?file_name=$entry' target=_blank>View </a></td>";
-				echo "<td><a href='delete.php?file_name=$entry'>Delete </a></td>";
+				echo "<button id = 'fileaction'><a href='download.php?file_name=$entry'>Download </a></button>";
+				echo "<button id = 'fileaction'><a href='viewFile.php?file_name=$entry' target=_blank>View </a></button>";
+				echo "<button id = 'fileaction'><a href='delete.php?file_name=$entry'>Delete </a></button>";
                 echo "<br>";
             }
         }
