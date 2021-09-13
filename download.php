@@ -9,16 +9,17 @@
         header("Location: usermainpage.php");
         exit ();  
     } else {  
-        header("Cache-Control: public");
-        header("Content-Description: File Transfer");
-        header("Content-Disposition: attachment; filename=$file_name");
-        header("Content-type: application/octet-stream" );  
+        //header("Cache-Control: public");
+        //header("Content-Description: File Transfer");
+        //header("Content-Disposition: attachment; filename=$file_name");
+        //header("Content-type: application/octet-stream" );  
         //header("Content-Type: application/zip");
         //header("Content-Transfer-Encoding: binary");
+
     // read the file from disk
-    readfile($file_name);
-    exit();
-    /* 
+    //readfile($file_name);
+    //exit();
+    
         $file = fopen($path, "r");  
         //Input the file label
         header("Content-type: application/octet-stream" );  
@@ -30,6 +31,5 @@
         //Read and output to the browser 
         echo fread ($file, filesize ($path) );  
         fclose ($file);  
-        */
     }  
 ?> 

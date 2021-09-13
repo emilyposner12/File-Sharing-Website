@@ -5,8 +5,9 @@
     
     $fullpath = sprintf('/home/ehedden/fileSharingUsers/%s/%s', $username, $file_name);
     unlink($fullpath);
-    echo("File deleted.");
-    echo("<br>");
-    echo"<a href='usermainpage.php'> Return to File Selection Screen </a>";
+    header("Location: usermainpage.php");
+    //echo("File deleted.");
+  //echo("<br>");
+    //echo"<a href='usermainpage.php'> Return to File Selection Screen </a>";
     exit;
 ?>
