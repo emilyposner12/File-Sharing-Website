@@ -8,7 +8,7 @@
     height: 32px;
     font-size: 20px;
     text-align: center;
-    font-family: Open Sans;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: normal;
     border: none;
@@ -38,6 +38,7 @@ body{
     border-radius: 60px;
     height: 28px;
     font-size: 16px;
+    font-family: sans-serif;
     text-align: center;
     border: none;
 }
@@ -46,8 +47,10 @@ p{
     font-size: 20px;
     font-weight: bold;
     margin-left: 15px;
+    font-family: sans-serif;
 }
 h1{
+    font-family: sans-serif;
     color: white;
     font-size: 60px;
     margin-left: 15px;
