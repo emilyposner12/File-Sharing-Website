@@ -1,11 +1,38 @@
 body{
-    background-color: lightBlue;
+    background-image: linear-gradient(#35bbe0, #6078ea);
 }
 h1{
-    font-family: sans-serif;
+    color: white;
+    font-size: 60px;
+    margin-left: 15px;
+    
+}
+label{
+    color: white;
+    font-size: 50px;
+    margin-left: 15px;
+}
+input[type=text]{
+    height: 8vh;
+    min-width: 50vh;
+    font-size: 20px;
+    color: #202174;
+    border-radius: 10px;
+    background: white;
+    border: 0.5px solid #6078ea;
+    box-sizing: border-box;
+}
+input[type=submit]{
+    padding: 4px 11px;
+    background: white;
+    border-radius: 60px;
+    color: #202174;
+    height: 28px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
-    size: 72px;
-    color: lightcoral;
+    font-family: sans-serif;
+    border: none;
 }
 
 .center{        /*modified from https://www.w3schools.com/howto/howto_css_image_center.asp */                       
