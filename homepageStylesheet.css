@@ -4,18 +4,15 @@ body{
 h1{
     color: white;
     font-size: 60px;
-    margin-left: 15px;
-    
 }
 label{
     color: white;
-    font-size: 50px;
-    margin-left: 15px;
+    font-size: 24px;
 }
 input[type=text]{
     height: 8vh;
     min-width: 50vh;
-    font-size: 20px;
+    font-size: 24px;
     color: #202174;
     border-radius: 10px;
     background: white;
