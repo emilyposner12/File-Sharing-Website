@@ -8,7 +8,7 @@
   <body>
   <?php
     session_start();
-      $fileToShare = $_GET['fileToShare'];
+      $fileToShare = (string)htmlentities($_GET['fileToShare']);
       $_SESSION['fileToShare'] = $fileToShare;
     ?>
     <br>
